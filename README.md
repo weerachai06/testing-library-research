@@ -40,4 +40,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## Graphql
 |endpoint|
 |--------|
-|[endpoint](https://graphql-pokeapi.graphcdn.app/)https://graphql-pokeapi.graphcdn.app|
+| [https://graphql-pokeapi.graphcdn.app](https://graphql-pokeapi.graphcdn.app)|
