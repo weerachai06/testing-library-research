@@ -37,7 +37,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-## Graphql
-|endpoint|
-|--------|
-| [https://graphql-pokeapi.graphcdn.app](https://graphql-pokeapi.graphcdn.app)|
+## Environment
+| Environment | Endpoint |
+|-------------|----------|
+| REACT_APP_API_URL| [https://graphql-pokeapi.graphcdn.app](https://graphql-pokeapi.graphcdn.app) |
