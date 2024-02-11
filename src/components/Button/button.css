@@ -1,3 +1,13 @@
+* {
+  --button-bg-primary: #1ea7fd;
+  --button-text-primary: rgb(235, 235, 235);
+}
+
+.dark-theme {
+  --button-bg-primary: #2e2c2c;
+  --button-text-primary: white;
+}
+
 .storybook-button {
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
@@ -8,8 +18,8 @@
   line-height: 1;
 }
 .storybook-button--primary {
-  color: white;
-  background-color: #1ea7fd;
+  color: var(--button-text-primary);
+  background-color: var(--button-bg-primary);
 }
 .storybook-button--secondary {
   color: #333;
@@ -27,4 +37,7 @@
 .storybook-button--large {
   font-size: 16px;
   padding: 12px 24px;
+}
+.storybook-button--fullWidth {
+  width: 100%;
 }

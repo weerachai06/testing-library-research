@@ -1,4 +1,5 @@
 import React from 'react';
+import clsx from 'clsx'
 import './button.css';
 
 interface ButtonProps {
@@ -22,6 +23,10 @@ interface ButtonProps {
    * Optional click handler
    */
   onClick?: () => void;
+
+  theme?: 'light' | 'dark'
+
+  fullWidth?: boolean
 }
 
 /**
@@ -32,21 +37,23 @@ export const Button = ({
   size = 'medium',
   backgroundColor,
   label,
+  theme = 'light',
+  onClick,
+  fullWidth = false,
   ...props
 }: ButtonProps) => {
   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
   return (
     <button
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
+      className={clsx('storybook-button', `storybook-button--${size}`, mode, {
+        ['dark-theme']: theme === 'dark' && primary,
+        ['storybook-button--fullWidth']: fullWidth
+      })}
+      onClick={onClick}
       {...props}
     >
       {label}
-      <style jsx>{`
-        button {
-          background-color: ${backgroundColor};
-        }
-      `}</style>
     </button>
   );
 };

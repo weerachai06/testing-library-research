@@ -2,7 +2,7 @@
 import { server } from '@/helpers/test/server'
 import '@testing-library/jest-dom'
 import matchers from '@testing-library/jest-dom/matchers'
-import { cleanup } from '@testing-library/react'
+import { cleanup, configure } from '@testing-library/react'
 import dotEnv from 'dotenv'
 import { afterAll, afterEach, beforeAll, expect } from 'vitest'
 
@@ -14,6 +14,10 @@ global.IS_REACT_ACT_ENVIRONMENT = true;
 
 beforeAll(() => {
   server.listen()
+})
+
+configure({
+  computedStyleSupportsPseudoElements: true,
 })
 
 // runs a cleanup after each test case (e.g. clearing jsdom)
